@@ -21,6 +21,11 @@ class FightViewController: UIViewController {
         myHealthView.progress = 1
         enemyHealthView.progress = 1
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        myHealthView.progress = 1
+        enemyHealthView.progress = 1
+    }
 
     @IBAction
     private func basicAttackTap() {

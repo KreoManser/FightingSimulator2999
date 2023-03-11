@@ -8,6 +8,7 @@ protocol FightPresenter {
     func getEnemyHealth() -> Float
     var showResult: (_ result: Bool) -> Void { get }
     var restartFight: () -> Void { get set }
+    func reset()
 }
 
 
@@ -47,5 +48,9 @@ class FightPresenterImpl: FightPresenter {
     
     func getEnemyHealth() -> Float {
         fightService.getEnemyHealth()
+    }
+    
+    func reset() {
+        fightService.reset()
     }
 }

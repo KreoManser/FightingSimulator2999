@@ -40,6 +40,7 @@ class FightServiceImpl: FightService {
 	func startFight() {
 		_myHealth.value = 100
 		_enemyHealth.value = 100
+        
 	}
 
 	func basicAttack() -> (Int, Int) {
@@ -47,16 +48,16 @@ class FightServiceImpl: FightService {
 		_myHealth.value -= 10
 		return (_myHealth.value, _enemyHealth.value)
 	}
-    
-    func reset() {
-        FightServiceImpl.shared.startFight()
-    }
 
 	func magicAttack() -> (Int, Int) {
 		_enemyHealth.value -= Int.random(in: 7..<16)
 		_myHealth.value -= 10
 		return (_myHealth.value, _enemyHealth.value)
 	}
+    
+    func reset() {
+        FightServiceImpl.shared.startFight()
+    }
 	
 	func getPlayerHealth() -> Float {
 		Float(_myHealth.value)

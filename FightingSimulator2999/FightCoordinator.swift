@@ -3,8 +3,8 @@ import UIKit
 class FightCoordinator {
     weak var window: UIWindow?
     
-    let fightService: FightService = FightServiceImpl.shared
-    let navigationController: UINavigationController
+    var fightService: FightService = FightServiceImpl.shared
+    unowned var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController

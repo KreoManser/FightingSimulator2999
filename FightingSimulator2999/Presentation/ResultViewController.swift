@@ -29,6 +29,8 @@ class ResultViewController: UIViewController {
                 resultLabel.text = "You lose!"
         }
     }
+    
+    
 
     @IBAction
     private func restartTap() {

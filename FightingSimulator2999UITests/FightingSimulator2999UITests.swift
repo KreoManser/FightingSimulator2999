@@ -8,7 +8,7 @@
 import XCTest
 
 final class FightingSimulator2999UITests: XCTestCase {
-    func testExample() throws {
+    func restartButtonOnAnotherViewShouldBeExists() throws {
         let app = XCUIApplication()
         app.launch()
         let basicAttackButton = app.buttons["Basic attack"]
