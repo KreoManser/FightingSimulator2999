@@ -34,6 +34,7 @@ class ResultViewController: UIViewController {
 
     @IBAction
     private func restartTap() {
+        presenter.startFight()
 		presenter.restartFight()
     }
 }
