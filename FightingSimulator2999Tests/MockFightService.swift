@@ -9,26 +9,46 @@ import Foundation
 import Combine
 @testable import FightingSimulator2999
 
-class MockFightService: FightService {
+class FightServiceImpl: FightService {
+    static let shared: FightServiceImpl = .init()
+    
+    private var _isNewGame: CurrentValueSubject<Bool, Never> = .init(false)
+    var isNewGame: AnyPublisher<Bool, Never> { _isNewGame.eraseToAnyPublisher() }
+    
     var _myHealth: CurrentValueSubject<Int, Never> = .init(100)
     var _enemyHealth: CurrentValueSubject<Int, Never> = .init(100)
 
     var myHealth: AnyPublisher<Int, Never> { _myHealth.eraseToAnyPublisher() }
     var enemyHealth: AnyPublisher<Int, Never> { _enemyHealth.eraseToAnyPublisher() }
 
-    var startFightCalled: Bool = false
-    var basicAttackCalled: Bool = false
-    var magicAttackCalled: Bool = false
-
     func startFight() {
-        startFightCalled = true
+        _myHealth.value = 100
+        _enemyHealth.value = 100
     }
 
-    func basicAttack() {
-        basicAttackCalled = true
+    func basicAttack() -> (Int, Int) {
+        _enemyHealth.value -= 9
+        _myHealth.value -= 10
+        return (_myHealth.value, _enemyHealth.value)
+    }
+    
+    func reset() {
+        FightServiceImpl.shared.startFight()
     }
 
-    func magicAttack() {
-        magicAttackCalled = true
+    func magicAttack() -> (Int, Int) {
+        _enemyHealth.value -= Int.random(in: 7..<16)
+        _myHealth.value -= 10
+        return (_myHealth.value, _enemyHealth.value)
     }
+    
+    func getPlayerHealth() -> Float {
+        Float(_myHealth.value)
+    }
+    
+    func getEnemyHealth() -> Float {
+        Float(_enemyHealth.value)
+    }
+    
 }
+

@@ -19,6 +19,8 @@
 		AED7BC4329BC7B5700DCF749 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7BC4229BC7B5700DCF749 /* ResultViewController.swift */; };
 		AED7BC4529BC7B6800DCF749 /* FightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7BC4429BC7B6800DCF749 /* FightService.swift */; };
 		AED7BC4729BC84F100DCF749 /* MockFightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7BC4629BC84F100DCF749 /* MockFightService.swift */; };
+		DD61A19E29BC97DB00409EFB /* FightCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61A19D29BC97DB00409EFB /* FightCoordinator.swift */; };
+		DD61A1A029BC985300409EFB /* FightPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61A19F29BC985300409EFB /* FightPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		AED7BC4229BC7B5700DCF749 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		AED7BC4429BC7B6800DCF749 /* FightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightService.swift; sourceTree = "<group>"; };
 		AED7BC4629BC84F100DCF749 /* MockFightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFightService.swift; sourceTree = "<group>"; };
+		DD61A19D29BC97DB00409EFB /* FightCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightCoordinator.swift; sourceTree = "<group>"; };
+		DD61A19F29BC985300409EFB /* FightPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 				AED7BC3E29BC7AF700DCF749 /* Services */,
 				AED7BC0B29BC7AE600DCF749 /* AppDelegate.swift */,
 				AED7BC0D29BC7AE600DCF749 /* SceneDelegate.swift */,
+				DD61A19D29BC97DB00409EFB /* FightCoordinator.swift */,
 				AED7BC1129BC7AE600DCF749 /* Main.storyboard */,
 				AED7BC1729BC7AE700DCF749 /* Assets.xcassets */,
 				AED7BC1929BC7AE700DCF749 /* LaunchScreen.storyboard */,
@@ -148,6 +153,7 @@
 			children = (
 				AED7BC0F29BC7AE600DCF749 /* FightViewController.swift */,
 				AED7BC4229BC7B5700DCF749 /* ResultViewController.swift */,
+				DD61A19F29BC985300409EFB /* FightPresenter.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -287,8 +293,10 @@
 				AED7BC1029BC7AE600DCF749 /* FightViewController.swift in Sources */,
 				AED7BC4529BC7B6800DCF749 /* FightService.swift in Sources */,
 				AED7BC0C29BC7AE600DCF749 /* AppDelegate.swift in Sources */,
+				DD61A19E29BC97DB00409EFB /* FightCoordinator.swift in Sources */,
 				AED7BC0E29BC7AE600DCF749 /* SceneDelegate.swift in Sources */,
 				AED7BC1629BC7AE600DCF749 /* FightingSimulator2999.xcdatamodeld in Sources */,
+				DD61A1A029BC985300409EFB /* FightPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +480,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -499,6 +508,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

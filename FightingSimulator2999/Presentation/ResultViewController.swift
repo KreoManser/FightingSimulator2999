@@ -14,6 +14,7 @@ class ResultViewController: UIViewController {
     }
 
     var result: Result = .lose
+	var presenter: FightPresenter!
 
     @IBOutlet
     private var resultLabel: UILabel!
@@ -31,5 +32,6 @@ class ResultViewController: UIViewController {
 
     @IBAction
     private func restartTap() {
+		presenter.restartFight()
     }
 }
